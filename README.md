@@ -1,46 +1,107 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple, modern portfolio website built with React and TypeScript that displays images in a beautiful responsive grid layout.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 🎨 Modern, clean design with gradient header
+- 📱 Fully responsive grid layout
+- 🖼️ Hover effects on portfolio items
+- ⚡ Fast loading with lazy image loading
+- 🎯 Single page application
+- 📐 CSS Grid for perfect alignment
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js (version 14 or higher)
+- npm or yarn
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone or download this project
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+### Running the Development Server
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This will start the development server at `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Building for Production
 
-### `npm run eject`
+```bash
+npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This creates an optimized production build in the `build` folder.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Customization
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Adding Your Own Images
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. **Replace the sample images**: Edit the `portfolioItems` array in `src/App.tsx`
+2. **Use your own images**: Replace the Unsplash URLs with your own image URLs or local images
+3. **Add more items**: Simply add more objects to the `portfolioItems` array
 
-## Learn More
+### Example of adding your own portfolio item:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```typescript
+{
+  id: 7,
+  title: "My Project",
+  description: "Description of your project",
+  imageUrl: "/path/to/your/image.jpg", // or external URL
+  category: "Your Category"
+}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Styling Customization
+
+- **Colors**: Modify the CSS variables and gradient colors in `src/App.css`
+- **Layout**: Adjust the grid settings in the `.portfolio-grid` class
+- **Typography**: Update font sizes and weights in the CSS classes
+- **Animations**: Modify transition effects and hover states
+
+### Adding Local Images
+
+1. Place your images in the `public` folder
+2. Reference them in the `imageUrl` field like: `"/your-image.jpg"`
+
+## Project Structure
+
+```
+src/
+├── App.tsx          # Main component with portfolio data
+├── App.css          # Portfolio styling
+├── index.tsx        # App entry point
+└── index.css        # Global styles
+
+public/
+├── index.html       # HTML template
+└── [your-images]    # Add your images here
+```
+
+## Technologies Used
+
+- React 19
+- TypeScript
+- CSS Grid
+- Modern CSS features (Flexbox, Grid, Transitions)
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
